@@ -4,16 +4,18 @@ myApp.controller('maincontroller',['$http','gotData',function($http,gotData) {
 	var main=this;
 	this.alldata=[];
 	this.housedata;
+	this.chardata;
+	this.bookdata;
 
-	//console.log('hello');
+	
 	this.gethousename=function(){
 		gotData.getHouse(). then(
 		function successCallback(response){
 			//console.log(response);
 			main.housedata=response.data;
 			//console.log(response.data);
-			main.alldata.push(main.housedata);
-			//console.log(main.alldata[0][0].name);
+			main.alldata=main.alldata.concat(main.housedata);
+			console.log(main.alldata);
 		},
 		function errorCallback(response)
 		{
@@ -22,4 +24,29 @@ myApp.controller('maincontroller',['$http','gotData',function($http,gotData) {
 		);
 	}
 	this.gethousename();
+
+	this.getcharname=function(){
+		gotData.getCharacter().then(
+			function successCallback(response){
+				main.chardata=response.data;
+				main.alldata=main.alldata.concat(main.chardata);
+			},
+			function errorCallback(response){
+
+			}
+			);
+	}
+	this.getcharname();
+	this.getbookname=function(){
+		gotData.getBook().then(
+			function successCallback(response){
+				main.bookdata=response.data;
+				main.alldata=main.alldata.concat(main.bookdata);
+			},
+			function errorCallback(response){
+
+			}
+			);
+	}
+	this.getbookname();
 }]);//end ctrl

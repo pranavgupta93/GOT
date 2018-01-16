@@ -1,6 +1,12 @@
 myApp.controller('houseviewcontroller',['gotfullData','$routeParams',function(gotfullData,$routeParams){
 	this.housedata;
 	var main=this;
+	/*this.ind=1;
+	this.incrementindex=function(){
+		console.log('called');
+		main.ind++;
+	}*/
+
 	var num=$routeParams.id;
 	this.getdata=function(num){
 		gotfullData.gethousedetail(num)

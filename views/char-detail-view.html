@@ -1,8 +1,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-	<div ng-if="charview.chardata.aliases[0]">
-		<h2><center>
+	<!-- <div ng-if="charview.chardata.aliases[0]">
+		<h2><center><i class="fa fa-user" aria-hidden="true"></i>
 			{{charview.chardata.name}}
 			<div ng-hide="charview.chardata.name">
 			{{charview.chardata.aliases[0]}}
@@ -10,68 +10,74 @@
 		</center>
 			
 		</h2>
-	</div>	
-<div ng-if="charview.chardata.gender"><h5>Gender:</h5> {{charview.chardata.gender}}</div>
-<div ng-if="charview.chardata.culture">Culture: {{charview.chardata.culture}}</div>
+	</div>	<hr> -->
+	<div ng-if="charview.chardata.name">
+		<h2><center><i class="fa fa-user" aria-hidden="true"></i>{{charview.chardata.name}}
+		<div ng-hide="charview.chardata.name">
+			{{charview.chardata.aliases[0]}}
+		</div></center></h2>
+	</div><hr>
+<div ng-if="charview.chardata.gender"><h5>Gender:</h5> {{charview.chardata.gender}}<hr></div>
+<div ng-if="charview.chardata.culture">Culture: {{charview.chardata.culture}}<hr></div>
 
 	<div ng-if="charview.chardata.born">
 		<h5>Born:</h5> {{charview.chardata.born}}
-	</div>
+	<hr></div>
 	<div ng-if="charview.chardata.died">
 		<h5>Died:</h5> {{charview.chardata.died}}
-	</div>
+	<hr></div>
 	<div ng-if="charview.chardata.titles[0]">
 		<h5>Titles:</h5><div ng-repeat="title in charview.chardata.titles">
 			{{title}}<br>
 		</div>
 		
-	</div>
+	<hr></div>
 	<div ng-if="charview.chardata.aliases[0]">
 		<h5>Aliases:</h5>
 		<div ng-repeat="alias in charview.chardata.aliases">
 			{{alias}}<br>
 		</div>
 		
-	</div>
+	<hr></div>
 	<div ng-if="charview.chardata.father">
-		<h5>Father:</h5> {{charview.chardata.father}}
-	</div>
+		<h5>Father:</h5> <a ng-href="#!/char/{{charview.chardata.father.split('/').pop()}}">{{charview.chardata.father}}</a>
+	<hr></div>
 	<div ng-if="charview.chardata.mother">
-		<h5>Mother:</h5> {{charview.chardata.mother}}
-	</div>
+		<h5>Mother:</h5> <a ng-href="#!/char/{{charview.chardata.mother.split('/').pop()}}">{{charview.chardata.mother}}</a>
+	<hr></div>
 	<div ng-if="charview.chardata.spouse">
-		<h5>Spouse:</h5> {{charview.chardata.spouse}}
-	</div>
+		<h5>Spouse:</h5> <a ng-href="#!/char/{{charview.chardata.spouse.split('/').pop()}}">{{charview.chardata.spouse}}</a>
+	<hr></div>
 	<div ng-if="charview.chardata.allegiances[0]">
 		<h5>Allegiances:</h5>
 		<div ng-repeat="allegiance in charview.chardata.allegiances">
-			{{allegiance}}<br>
+			<a ng-href="#!/house/{{allegiance.split('/').pop()}}">House {{$index+1}}</a><br>
 		</div>
-	</div>
+	<hr></div>
 	<div ng-if="charview.chardata.books[0]">
 		<h5>Books:</h5>
 		<div ng-repeat="book in charview.chardata.books">
-			{{book}}<br>
+			<a ng-href="#!/book/{{book.split('/').pop()}}">Book {{$index+1}}</a><br>
 		</div>
-	</div>
+	<hr></div>
 	<div ng-if="charview.chardata.povBooks[0]">
-		<h5>povBooks:</h5>
+		<h5>POV Books:</h5>
 		<div ng-repeat="povBook in charview.chardata.povBooks">
-			{{povBook}}<br>
+			<a ng-href="#!/book/{{povBook.split('/').pop()}}">POV Book {{$index+1}}</a><br>
 		</div>
-	</div>
+	<hr></div>
 	<div ng-if="charview.chardata.tvSeries[0]">
-		<h5>TvSeries:</h5>
+		<h5>TV Series:</h5>
 		<div ng-repeat="tv in charview.chardata.tvSeries">
 			{{tv}}<br>
 		</div>
-	</div>
+	<hr></div>
 	<div ng-if="charview.chardata.playedBy[0]">
-		<h5>PlayedBy:</h5>
+		<h5>Played By:</h5>
 		<div ng-repeat="played in charview.chardata.playedBy">
 			{{played}}<br>
 		</div>
-	</div>
+	<hr></div>
 </div>
 	</div>
 </div>

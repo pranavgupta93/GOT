@@ -3,45 +3,45 @@
 		<div class="col-md-12">
 			<h2>
 				<center>
-					{{bookview.bookdata.name}}
+					<i class="fa fa-book" aria-hidden="true"></i>{{bookview.bookdata.name}}
 				</center>
 			</h2>
-		
-		<div><h5>Isbn: </h5>{{bookview.bookdata.isbn}}</div>
+		<hr>
+		<div ng-if="bookview.bookdata.isbn"><h5>Isbn: </h5>{{bookview.bookdata.isbn}}<hr></div>
 		<div ng-if="bookview.bookdata.authors[0]">
 			<h5>Authors: </h5>
 			<div ng-repeat="author in bookview.bookdata.authors">
 				{{author}}<br>
 			</div>
-		</div>
+		<hr></div>
 		<div ng-if="bookview.bookdata.numberOfPages">
 			<h5>Number of Pages:</h5> {{bookview.bookdata.numberOfPages}}
-		</div>
+		<hr></div>
 		<div ng-if="bookview.bookdata.publisher">
 			<h5>Publisher: </h5>
 			{{bookview.bookdata.publisher}}
-		</div>
+		<hr></div>
 		<div ng-if="bookview.bookdata.country">
 			<h5>Country:</h5> {{bookview.bookdata.country}}
-		</div>
+		<hr></div>
 		<div ng-if="bookview.bookdata.mediaType">
 			<h5>Media Type: </h5>{{bookview.bookdata.mediaType}}
-		</div>
+		<hr></div>
 		<div ng-if="bookview.bookdata.released">
-			<h5>Released: </h5>{{bookview.bookdata.released|date:'medium'}}
-		</div>
+			<h5>Released: </h5>{{bookview.bookdata.released|date:'longDate'}}
+		<hr></div>
 		<div ng-if="bookview.bookdata.characters[0]">
 			<h5>Characters:</h5>
 			<div ng-repeat="character in bookview.bookdata.characters">
-				{{character}}<br>
+				<a ng-href="#!/char/{{character.split('/').pop()}}">Character {{$index+1}}</a><br>
 			</div>
-		</div>
+		<hr></div>
 		<div ng-if="bookview.bookdata.povCharacters[0]">
 			<h5>POV Characters:</h5>
 			<div ng-repeat="povcharacter in bookview.bookdata.povCharacters">
-				{{povcharacter}}<br>
+				<a ng-href="#!/char/{{povcharacter.split('/').pop()}}">POV Character {{$index+1}}<br>
 			</div>
-		</div>
+		<hr></div>
 	</div>
 	</div>
 </div>

@@ -12,7 +12,7 @@ myApp.config(['$routeProvider',function($routeProvider) {
 	})
 	.when('/house/:id',{
 		templateUrl : 'views/house-detail-view.html',
-		controllerAs: 'houseviewcontroller',
+		controller: 'houseviewcontroller',
 		controllerAs: "houseview" 
 	})
 	.when('/book/:id',{

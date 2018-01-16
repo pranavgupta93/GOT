@@ -2,7 +2,7 @@ myApp.controller('charviewcontroller',['gotfullData','$routeParams',function(got
 	this.chardata;
 	var main=this;
 	var num=$routeParams.id;
-	console.log('hello');
+	//console.log('hello');
 	this.getdata=function(num){
 		gotfullData.getchardetail(num).then(
 			function successCallback(response){

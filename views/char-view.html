@@ -1,3 +1,3 @@
 <div ng-if="all.gender">
-<h2><a ng-href="#!/char/{{all.url.split('/').pop()}}"><i class="fa fa-user" aria-hidden="true"></i> {{all.aliases[0]}} <span ng-if="all.name">({{all.name}})</span></a></h2>
+<h2><a ng-href="#!/char/{{all.url.split('/').pop()}}"><i class="fa fa-user" aria-hidden="true"></i> {{all.name}} <span ng-hide="all.name">{{all.aliases[0]}}</span></a></h2>
 </div>

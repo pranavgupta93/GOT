@@ -1,0 +1,47 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>
+				<center>
+					{{bookview.bookdata.name}}
+				</center>
+			</h2>
+		
+		<div><h5>Isbn: </h5>{{bookview.bookdata.isbn}}</div>
+		<div ng-if="bookview.bookdata.authors[0]">
+			<h5>Authors: </h5>
+			<div ng-repeat="author in bookview.bookdata.authors">
+				{{author}}<br>
+			</div>
+		</div>
+		<div ng-if="bookview.bookdata.numberOfPages">
+			<h5>Number of Pages:</h5> {{bookview.bookdata.numberOfPages}}
+		</div>
+		<div ng-if="bookview.bookdata.publisher">
+			<h5>Publisher: </h5>
+			{{bookview.bookdata.publisher}}
+		</div>
+		<div ng-if="bookview.bookdata.country">
+			<h5>Country:</h5> {{bookview.bookdata.country}}
+		</div>
+		<div ng-if="bookview.bookdata.mediaType">
+			<h5>Media Type: </h5>{{bookview.bookdata.mediaType}}
+		</div>
+		<div ng-if="bookview.bookdata.released">
+			<h5>Released: </h5>{{bookview.bookdata.released|date:'medium'}}
+		</div>
+		<div ng-if="bookview.bookdata.characters[0]">
+			<h5>Characters:</h5>
+			<div ng-repeat="character in bookview.bookdata.characters">
+				{{character}}<br>
+			</div>
+		</div>
+		<div ng-if="bookview.bookdata.povCharacters[0]">
+			<h5>POV Characters:</h5>
+			<div ng-repeat="povcharacter in bookview.bookdata.povCharacters">
+				{{povcharacter}}<br>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>

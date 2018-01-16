@@ -1,0 +1,72 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2><center>
+				{{houseview.housedata.name}}
+			</center></h2>
+			<div ng-if="houseview.housedata.region">
+				<h5>Region: </h5>
+				{{houseview.housedata.region}}
+			</div>
+			<div ng-if="houseview.housedata.coatOfArms">
+			<h5>Coat Of Arms: </h5>	{{houseview.housedata.coatOfArms}}
+			</div>
+			<div ng-if="houseview.housedata.words">
+				<h5>Words: </h5>{{houseview.housedata.words}}
+			</div>
+			<div ng-if="houseview.housedata.titles[0]">
+				<h5>Titles: </h5>
+				<div ng-repeat="title in houseview.housedata.titles">
+					{{title}}<br>
+				</div>
+			</div>
+			<div ng-if="houseview.housedata.seats[0]">
+				<h5>Seats: </h5>
+				<div ng-repeat="seat in houseview.housedata.seats">
+					{{seat}}<br>
+				</div>
+			</div>
+
+			<div ng-if="houseview.housedata.currentLord">
+				<h5>Current Lord: </h5>{{houseview.housedata.currentLord}}
+			</div>
+			<div ng-if="houseview.housedata.heir">
+				<h5>Heir: </h5>{{houseview.housedata.heir}}
+			</div>
+			<div ng-if="houseview.housedata.overlord">
+				<h5>OverLord: </h5>{{houseview.housedata.overlord}}
+			</div>
+			<div ng-if="houseview.housedata.founded">
+				<h5>Founded: </h5>{{houseview.housedata.founded}}
+			</div>
+			<div ng-if="houseview.housedata.founder">
+				<h5>Founder: </h5>{{houseview.housedata.founder}}
+			</div>
+			<div ng-if="houseview.housedata.diedOut">
+				<h5>DiedOut: </h5>{{houseview.housedata.diedOut}}
+			</div>
+			<div ng-if="houseview.housedata.ancestralWeapons[0]">
+				<h5>Ancestral Weapons: </h5>
+				<div ng-repeat="weapon in houseview.housedata.ancestralWeapons">
+					{{weapon}}<br>
+				</div>
+				
+			</div>
+			<div ng-if="houseview.housedata.cadetBranches[0]">
+				<h5>Cadet Branches: </h5>
+				<div ng-repeat="cadet in houseview.housedata.cadetBranches">
+					{{cadet}}<br>
+				</div>
+				
+			</div>
+			<div ng-if="houseview.housedata.swornMembers[0]">
+				<h5>Sworn Members: </h5>
+				<div ng-repeat="sworn in houseview.housedata.swornMembers">
+					{{sworn}}<br>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+</div>

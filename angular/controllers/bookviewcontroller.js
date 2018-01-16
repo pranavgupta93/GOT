@@ -1,4 +1,4 @@
-myApp.controller('bookviewcontroller',['gotfullData','$routeParams',(functiongotfullDat,$routeParams) {
+myApp.controller('bookviewcontroller',['gotfullData','$routeParams',function(gotfullData,$routeParams) {
 	this.bookdata;
 	var main=this;
 	var num=$routeParams.id;

@@ -3,7 +3,12 @@
 		<div class="col-md-12">
 	<div ng-if="charview.chardata.aliases[0]">
 		<h2><center>
-			{{charview.chardata.aliases[0]}}</center>
+			{{charview.chardata.name}}
+			<div ng-hide="charview.chardata.name">
+			{{charview.chardata.aliases[0]}}
+			</div>
+		</center>
+			
 		</h2>
 	</div>	
 <div ng-if="charview.chardata.gender"><h5>Gender:</h5> {{charview.chardata.gender}}</div>

@@ -12,11 +12,11 @@
 		</h2>
 	</div>	<hr> -->
 	<div ng-if="charview.chardata.name">
-		<h2><center><i class="fa fa-user" aria-hidden="true"></i>{{charview.chardata.name}}
+		<h2><center><i class="fa fa-user" aria-hidden="true"></i>{{charview.chardata.name}}</center></h2></div>
 		<div ng-hide="charview.chardata.name">
-			{{charview.chardata.aliases[0]}}
-		</div></center></h2>
-	</div><hr>
+			<h2><center>{{charview.chardata.aliases[0]}}</center></h2>
+		</div></center>
+	<hr>
 <div ng-if="charview.chardata.gender"><h5>Gender:</h5> {{charview.chardata.gender}}<hr></div>
 <div ng-if="charview.chardata.culture">Culture: {{charview.chardata.culture}}<hr></div>
 

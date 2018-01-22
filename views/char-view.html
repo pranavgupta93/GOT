@@ -1,3 +1,9 @@
+<!-- <div ng-if="all.gender">
+<h3><a ng-href="#!/char/{{all.url.split('/').pop()}}"><i class="fa fa-user" aria-hidden="true"></i><span ng-show="all.name"> {{all.name}}</span> <span ng-hide="all.name">{{all.aliases[0]}}</span></a></h3>
+</div> -->
 <div ng-if="all.gender">
-<h3><a ng-href="#!/char/{{all.url.split('/').pop()}}"><i class="fa fa-user" aria-hidden="true"></i> {{all.name}} <span ng-hide="all.name">{{all.aliases[0]}}</span></a></h3>
-</div>
+
+	<span ng-if="all.name">
+		<h3><a ng-href="#!/char/{{all.url.split('/').pop()}}"><i class="fa fa-user" aria-hidden="true"></i>{{all.name}}</a></h3><hr>
+	</span>
+	</div>

@@ -10,7 +10,8 @@ myApp.controller('charviewcontroller',['gotfullData','$routeParams',function(got
 				console.log(main.chardata);
 			},
 			function errorCallback(response){
-
+				console.log('Some error occurred');
+				console.log(response);
 			}
 			);
 	}

@@ -1,47 +1,60 @@
 <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<h2>
-				<center>
-					<i class="fa fa-book" aria-hidden="true"></i>{{bookview.bookdata.name}}
-				</center>
-			</h2>
-		<hr>
-		<div ng-if="bookview.bookdata.isbn"><h5>Isbn: </h5>{{bookview.bookdata.isbn}}<hr></div>
-		<div ng-if="bookview.bookdata.authors[0]">
-			<h5>Authors: </h5>
-			<div ng-repeat="author in bookview.bookdata.authors">
-				{{author}}<br>
-			</div>
-		<hr></div>
-		<div ng-if="bookview.bookdata.numberOfPages">
-			<h5>Number of Pages:</h5> {{bookview.bookdata.numberOfPages}}
-		<hr></div>
-		<div ng-if="bookview.bookdata.publisher">
-			<h5>Publisher: </h5>
-			{{bookview.bookdata.publisher}}
-		<hr></div>
-		<div ng-if="bookview.bookdata.country">
-			<h5>Country:</h5> {{bookview.bookdata.country}}
-		<hr></div>
-		<div ng-if="bookview.bookdata.mediaType">
-			<h5>Media Type: </h5>{{bookview.bookdata.mediaType}}
-		<hr></div>
-		<div ng-if="bookview.bookdata.released">
-			<h5>Released: </h5>{{bookview.bookdata.released|date:'longDate'}}
-		<hr></div>
-		<div ng-if="bookview.bookdata.characters[0]">
-			<h5>Characters:</h5>
-			<div ng-repeat="character in bookview.bookdata.characters">
-				<a ng-href="#!/char/{{character.split('/').pop()}}">Character {{$index+1}}</a><br>
-			</div>
-		<hr></div>
-		<div ng-if="bookview.bookdata.povCharacters[0]">
-			<h5>POV Characters:</h5>
-			<div ng-repeat="povcharacter in bookview.bookdata.povCharacters">
-				<a ng-href="#!/char/{{povcharacter.split('/').pop()}}">POV Character {{$index+1}}<br>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>
+                <center>
+                    <i class="fa fa-book" aria-hidden="true"></i>{{bookview.bookdata.name}}
+                </center>
+            </h2>
+            <hr>
+            <div ng-if="bookview.bookdata.isbn">
+                <h5>Isbn: </h5>{{bookview.bookdata.isbn}}
+                <hr>
+            </div>
+            <div ng-if="bookview.bookdata.authors[0]">
+                <h5>Authors: </h5>
+                <div ng-repeat="author in bookview.bookdata.authors">
+                    {{author}}<br>
+                </div>
+                <hr>
+            </div>
+            <div ng-if="bookview.bookdata.numberOfPages">
+                <h5>Number of Pages:</h5> {{bookview.bookdata.numberOfPages}}
+                <hr>
+            </div>
+            <div ng-if="bookview.bookdata.publisher">
+                <h5>Publisher: </h5>
+                {{bookview.bookdata.publisher}}
+                <hr>
+            </div>
+            <div ng-if="bookview.bookdata.country">
+                <h5>Country:</h5> {{bookview.bookdata.country}}
+                <hr>
+            </div>
+            <div ng-if="bookview.bookdata.mediaType">
+                <h5>Media Type: </h5>{{bookview.bookdata.mediaType}}
+                <hr>
+            </div>
+            <div ng-if="bookview.bookdata.released">
+                <h5>Released: </h5>{{bookview.bookdata.released|date:'longDate'}}
+                <hr>
+            </div>
+            <div ng-if="bookview.bookdata.characters[0]">
+                <h5>Characters:</h5>
+                <div ng-repeat="character in bookview.bookdata.characters">
+                    <a ng-href="#!/char/{{character.split('/').pop()}}">Character {{$index+1}}</a><br>
+                </div>
+                <hr>
+            </div>
+            <div ng-if="bookview.bookdata.povCharacters[0]">
+                <h5>POV Characters:</h5>
+                <div ng-repeat="povcharacter in bookview.bookdata.povCharacters">
+                    <a ng-href="#!/char/{{povcharacter.split('/').pop()}}">POV Character {{$index+1}}<br>
 			</div>
 		<hr></div>
 	</div>
-	</div>
-</div>
+	<div class="col-md-12">
+		<center><a ng-href="#!/"><button>Go Back</button></a></center>
+                </div>
+            </div>
+        </div>

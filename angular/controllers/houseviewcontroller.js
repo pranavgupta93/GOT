@@ -16,7 +16,7 @@ myApp.controller('houseviewcontroller',['gotfullData','$routeParams',function(go
 			},
 			function errorCallback(response)
 			{
-				console.log('error');
+				console.log('Some error occurred');
 				console.log(response);
 			}
 			);

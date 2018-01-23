@@ -19,7 +19,8 @@ myApp.controller('maincontroller',['$http','gotData',function($http,gotData) {
 		},
 		function errorCallback(response)
 		{
-			console.log('err');
+			console.log('Some error occurred');
+			console.log(response);
 		}
 		);
 	}
@@ -32,7 +33,8 @@ myApp.controller('maincontroller',['$http','gotData',function($http,gotData) {
 				main.alldata=main.alldata.concat(main.chardata);
 			},
 			function errorCallback(response){
-
+				console.log('Some error occurred');
+				console.log(response);
 			}
 			);
 	}
@@ -44,7 +46,8 @@ myApp.controller('maincontroller',['$http','gotData',function($http,gotData) {
 				main.alldata=main.alldata.concat(main.bookdata);
 			},
 			function errorCallback(response){
-
+				console.log('Some error occurred');
+				console.log(response);
 			}
 			);
 	}
